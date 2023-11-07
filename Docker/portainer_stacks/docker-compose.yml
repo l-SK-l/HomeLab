@@ -26,8 +26,8 @@ services:
       - "3000:3000"
     volumes:
       - grafana-data:/var/lib/grafana
-      - Docker/portainer_stacks/definitions:/var/lib/grafana/dashboards
-      - Docker/portainer_stacks/provisioning:/etc/grafana/provisioning
+      - ./Docker/portainer_stacks/definitions:/var/lib/grafana/dashboards
+      - ./Docker/portainer_stacks/provisioning:/etc/grafana/provisioning
     restart: unless-stopped
     environment:
       - GF_SECURITY_ADMIN_PASSWORD=admin
