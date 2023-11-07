@@ -1,0 +1,47 @@
+version: '3'
+
+volumes:
+  prometheus-data:
+    driver: local
+  grafana-data:
+    driver: local
+
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - /etc/prometheus:/etc/prometheus
+      - prometheus-data:/prometheus
+    restart: unless-stopped
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana-data:/var/lib/grafana
+    restart: unless-stopped
+    environment:
+      - GRAFANA_ADMIN_PASSWORD=admin
+      - GRAFANA_API_TOKEN_FILE=/run/secrets/tokens/grafana_token.txt
+    command:
+      - "grafana-cli admin reset-admin-password ${GRAFANA_ADMIN_PASSWORD}"
+      - "grafana-cli plugins install grafana-simple-json-datasource"
+      - "curl -X POST -H 'Content-Type: application/json' -H 'Authorization: Bearer $(cat ${GRAFANA_API_TOKEN_FILE})' --data-binary @./1860_rev33.json http://localhost:3000/api/dashboards/db"
+      - "curl -X POST -H 'Content-Type: application/json' -H 'Authorization: Bearer $(cat ${GRAFANA_API_TOKEN_FILE})' -d '{\"name\":\"Prometheus\",\"type\":\"prometheus\",\"url\":\"http://prometheus:9090\",\"access\":\"proxy\",\"basicAuth\":false}' http://localhost:3000/api/datasources"
+      
+  node_exporter:
+    image: quay.io/prometheus/node-exporter:latest
+    container_name: node_exporter
+    command:
+      - '--path.rootfs=/host'
+    pid: host
+    restart: unless-stopped
+    volumes:
+      - '/:/host:ro,rslave'
