@@ -27,12 +27,26 @@ services:
     volumes:
       - grafana-data:/var/lib/grafana
     restart: unless-stopped
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
     command:
-      - "grafana-cli admin reset-admin-password admin"
-      - "grafana-cli plugins install grafana-simple-json-datasource"
-      - "curl -X POST -H 'Content-Type: application/json' -d '{\"dashboard\": 1860, \"overwrite\": true}' -u admin:admin http://localhost:3000/api/dashboards/import"
-      - "curl -X POST -H 'Content-Type: application/json' -d '{\"name\":\"Prometheus\",\"type\":\"prometheus\",\"url\":\"http://prometheus:9090\",\"access\":\"proxy\",\"basicAuth\":false}' -u admin:admin http://localhost:3000/api/datasources"
-      
+      - "/bin/sh"
+      - "-c"
+      - |
+        # Ожидаем, пока Grafana API станет доступным
+        until curl -f http://localhost:3000/api/health; do
+          echo "Waiting for Grafana API..."
+          sleep 1
+        done
+        # Загружаем дашборды и источники данных после успешной проверки
+        cp ./dashboards/1860_rev33.json /var/lib/grafana/dashboards/dashboard.json
+        cp ./datasources/datasource.yml /var/lib/grafana/datasources/datasource.yml
+
   node_exporter:
     image: quay.io/prometheus/node-exporter:latest
     container_name: node_exporter
