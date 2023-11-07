@@ -26,8 +26,8 @@ services:
       - "3000:3000"
     volumes:
       - grafana-data:/var/lib/grafana
-      - ./grafana:/etc/grafana/provisioning/dashboards
-      - ./grafana:/etc/grafana/provisioning/datasources
+      - ./dashboards:/etc/grafana/provisioning/dashboards
+      - ./datasources:/etc/grafana/provisioning/datasources
     restart: unless-stopped
     environment:
       - GF_SECURITY_ADMIN_PASSWORD=admin
@@ -36,18 +36,6 @@ services:
       interval: 10s
       timeout: 5s
       retries: 3
-    command:
-      - "/bin/sh"
-      - "-c"
-      - |
-        # Ожидаем, пока Grafana API станет доступным
-        until curl -f http://localhost:3000/api/health; do
-          echo "Waiting for Grafana API..."
-          sleep 1
-        done
-        # Загружаем дашборды и источники данных после успешной проверки
-        cp ./dashboards/1860_rev33.json /var/lib/grafana/dashboards/dashboard.json
-        cp ./datasources/datasource.yml /var/lib/grafana/datasources/datasource.yml
 
   node_exporter:
     image: quay.io/prometheus/node-exporter:latest
