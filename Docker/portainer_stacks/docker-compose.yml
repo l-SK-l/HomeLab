@@ -30,7 +30,7 @@ services:
     command:
       - "grafana-cli admin reset-admin-password admin"
       - "grafana-cli plugins install grafana-simple-json-datasource"
-      - "cat 1860_rev33.json | curl -X POST -H 'Content-Type: application/json' -d @- http://admin:admin@localhost:3000/api/dashboards/db"
+      - "curl -X POST -H 'Content-Type: application/json' -d '{\"dashboard\": 1860, \"overwrite\": true}' -u admin:admin http://localhost:3000/api/dashboards/import"
       - "curl -X POST -H 'Content-Type: application/json' -d '{\"name\":\"Prometheus\",\"type\":\"prometheus\",\"url\":\"http://prometheus:9090\",\"access\":\"proxy\",\"basicAuth\":false}' -u admin:admin http://localhost:3000/api/datasources"
       
   node_exporter:
