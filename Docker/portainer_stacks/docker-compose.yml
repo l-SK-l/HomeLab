@@ -26,8 +26,8 @@ services:
       - "3000:3000"
     volumes:
       - grafana-data:/var/lib/grafana
-      - ./grafana/definitions:/var/lib/grafana/dashboards
-      - ./grafana/provisioning:/etc/grafana/provisioning
+      - ./definitions:/var/lib/grafana/dashboards
+      - ./provisioning:/etc/grafana/provisioning
     restart: unless-stopped
     environment:
       - GF_SECURITY_ADMIN_PASSWORD=admin
