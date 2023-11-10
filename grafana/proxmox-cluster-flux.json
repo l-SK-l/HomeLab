@@ -36,144 +36,6 @@
     "liveNow": true,
     "panels": [
       {
-        "datasource": {
-          "type": "influxdb",
-          "uid": "ed00438e-07e0-4b52-bd03-6aa59430054f"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "thresholds"
-            },
-            "displayName": "Temp",
-            "mappings": [],
-            "max": 103,
-            "min": 30,
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": null
-                },
-                {
-                  "color": "red",
-                  "value": 85
-                }
-              ]
-            },
-            "unit": "celsius"
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 6,
-          "w": 12,
-          "x": 0,
-          "y": 0
-        },
-        "id": 50,
-        "options": {
-          "minVizHeight": 75,
-          "minVizWidth": 75,
-          "orientation": "auto",
-          "reduceOptions": {
-            "calcs": [
-              "lastNotNull"
-            ],
-            "fields": "",
-            "values": false
-          },
-          "showThresholdLabels": true,
-          "showThresholdMarkers": true,
-          "text": {}
-        },
-        "pluginVersion": "10.2.0",
-        "targets": [
-          {
-            "datasource": {
-              "type": "influxdb",
-              "uid": "ed00438e-07e0-4b52-bd03-6aa59430054f"
-            },
-            "query": "from(bucket: \"homelab\")\n  |\u003e range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |\u003e filter(fn: (r) =\u003e r[\"_measurement\"] == \"sensors\")\n  |\u003e filter(fn: (r) =\u003e r[\"_field\"] == \"temp_input\")\n  |\u003e filter(fn: (r) =\u003e r[\"feature\"] == \"core_0\" or r[\"feature\"] == \"core_1\" or r[\"feature\"] == \"core_2\" or r[\"feature\"] == \"core_3\")\n  |\u003e filter(fn: (r) =\u003e r[\"feature\"] == \"core_0\" or r[\"feature\"] == \"core_1\" or r[\"feature\"] == \"core_2\" or r[\"feature\"] == \"core_3\")\n  |\u003e aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |\u003e yield(name: \"mean\")\n",
-            "refId": "A"
-          }
-        ],
-        "title": "CPU Core Temperature",
-        "transformations": [],
-        "transparent": true,
-        "type": "gauge"
-      },
-      {
-        "datasource": {
-          "type": "influxdb",
-          "uid": "ed00438e-07e0-4b52-bd03-6aa59430054f"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "thresholds"
-            },
-            "displayName": "Temp",
-            "mappings": [],
-            "max": 103,
-            "min": 30,
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": null
-                },
-                {
-                  "color": "red",
-                  "value": 85
-                }
-              ]
-            },
-            "unit": "celsius"
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 6,
-          "w": 12,
-          "x": 12,
-          "y": 0
-        },
-        "id": 51,
-        "options": {
-          "minVizHeight": 75,
-          "minVizWidth": 75,
-          "orientation": "auto",
-          "reduceOptions": {
-            "calcs": [
-              "lastNotNull"
-            ],
-            "fields": "",
-            "values": false
-          },
-          "showThresholdLabels": true,
-          "showThresholdMarkers": true,
-          "text": {}
-        },
-        "pluginVersion": "10.2.0",
-        "targets": [
-          {
-            "datasource": {
-              "type": "influxdb",
-              "uid": "ed00438e-07e0-4b52-bd03-6aa59430054f"
-            },
-            "query": "from(bucket: \"homelab\")\n  |\u003e range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |\u003e filter(fn: (r) =\u003e r[\"_measurement\"] == \"sensors\")\n  |\u003e filter(fn: (r) =\u003e r[\"_field\"] == \"temp_input\")\n  |\u003e filter(fn: (r) =\u003e r[\"feature\"] =~ /core_[0-3]/)\n  |\u003e aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |\u003e yield(name: \"mean\")\n",
-            "refId": "A"
-          }
-        ],
-        "title": "CPU Core Temperature",
-        "transformations": [],
-        "transparent": true,
-        "type": "gauge"
-      },
-      {
         "collapsed": false,
         "datasource": {
           "type": "influxdb",
@@ -183,7 +45,7 @@
           "h": 1,
           "w": 24,
           "x": 0,
-          "y": 6
+          "y": 0
         },
         "id": 18,
         "panels": [],
@@ -200,6 +62,75 @@
         ],
         "title": "Summary $server",
         "type": "row"
+      },
+      {
+        "datasource": {
+          "type": "influxdb",
+          "uid": "ed00438e-07e0-4b52-bd03-6aa59430054f"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "displayName": "Temp",
+            "mappings": [],
+            "max": 103,
+            "min": 30,
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 85
+                }
+              ]
+            },
+            "unit": "celsius"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 6,
+          "w": 3,
+          "x": 0,
+          "y": 1
+        },
+        "id": 51,
+        "options": {
+          "minVizHeight": 75,
+          "minVizWidth": 75,
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "last"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showThresholdLabels": true,
+          "showThresholdMarkers": true,
+          "text": {}
+        },
+        "pluginVersion": "10.2.0",
+        "targets": [
+          {
+            "datasource": {
+              "type": "influxdb",
+              "uid": "ed00438e-07e0-4b52-bd03-6aa59430054f"
+            },
+            "query": "from(bucket: \"homelab\")\n  |\u003e range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |\u003e filter(fn: (r) =\u003e r[\"_measurement\"] == \"sensors\")\n  |\u003e filter(fn: (r) =\u003e r[\"_field\"] == \"temp_input\")\n  |\u003e filter(fn: (r) =\u003e r[\"feature\"] == \"core_0\")\n  |\u003e aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |\u003e yield(name: \"mean\")\n",
+            "refId": "A"
+          }
+        ],
+        "title": "CPU Core Temperature",
+        "transformations": [],
+        "transparent": true,
+        "type": "gauge"
       },
       {
         "datasource": {
@@ -239,8 +170,8 @@
         "gridPos": {
           "h": 6,
           "w": 3,
-          "x": 0,
-          "y": 7
+          "x": 3,
+          "y": 1
         },
         "id": 2,
         "options": {
@@ -301,9 +232,9 @@
         },
         "gridPos": {
           "h": 3,
-          "w": 3,
-          "x": 3,
-          "y": 7
+          "w": 2,
+          "x": 6,
+          "y": 1
         },
         "id": 4,
         "options": {
@@ -367,8 +298,8 @@
         "gridPos": {
           "h": 3,
           "w": 3,
-          "x": 6,
-          "y": 7
+          "x": 8,
+          "y": 1
         },
         "id": 8,
         "options": {
@@ -431,9 +362,9 @@
         },
         "gridPos": {
           "h": 3,
-          "w": 3,
-          "x": 9,
-          "y": 7
+          "w": 2,
+          "x": 11,
+          "y": 1
         },
         "id": 9,
         "options": {
@@ -498,9 +429,9 @@
         },
         "gridPos": {
           "h": 6,
-          "w": 12,
-          "x": 12,
-          "y": 7
+          "w": 11,
+          "x": 13,
+          "y": 1
         },
         "id": 14,
         "options": {
@@ -565,9 +496,9 @@
         },
         "gridPos": {
           "h": 3,
-          "w": 3,
-          "x": 3,
-          "y": 10
+          "w": 2,
+          "x": 6,
+          "y": 4
         },
         "id": 6,
         "options": {
@@ -637,8 +568,8 @@
         "gridPos": {
           "h": 3,
           "w": 3,
-          "x": 6,
-          "y": 10
+          "x": 8,
+          "y": 4
         },
         "id": 10,
         "options": {
@@ -707,9 +638,9 @@
         },
         "gridPos": {
           "h": 3,
-          "w": 3,
-          "x": 9,
-          "y": 10
+          "w": 2,
+          "x": 11,
+          "y": 4
         },
         "id": 12,
         "options": {
@@ -747,7 +678,7 @@
           "h": 1,
           "w": 24,
           "x": 0,
-          "y": 13
+          "y": 7
         },
         "id": 49,
         "panels": [],
@@ -819,7 +750,7 @@
           "h": 7,
           "w": 12,
           "x": 0,
-          "y": 14
+          "y": 8
         },
         "id": 16,
         "options": {
@@ -931,7 +862,7 @@
           "h": 7,
           "w": 12,
           "x": 12,
-          "y": 14
+          "y": 8
         },
         "id": 19,
         "options": {
@@ -988,7 +919,7 @@
           "h": 1,
           "w": 24,
           "x": 0,
-          "y": 21
+          "y": 15
         },
         "id": 23,
         "panels": [],
@@ -1090,7 +1021,7 @@
           "h": 9,
           "w": 12,
           "x": 0,
-          "y": 22
+          "y": 16
         },
         "id": 21,
         "options": {
@@ -1207,7 +1138,7 @@
           "h": 9,
           "w": 12,
           "x": 12,
-          "y": 22
+          "y": 16
         },
         "id": 24,
         "options": {
@@ -1286,8 +1217,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "green",
-                  "value": null
+                  "color": "green"
                 },
                 {
                   "color": "red",
@@ -1302,7 +1232,7 @@
           "h": 8,
           "w": 12,
           "x": 0,
-          "y": 31
+          "y": 25
         },
         "id": 26,
         "options": {
@@ -1381,8 +1311,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "green",
-                  "value": null
+                  "color": "green"
                 },
                 {
                   "color": "red",
@@ -1398,7 +1327,7 @@
           "h": 8,
           "w": 12,
           "x": 12,
-          "y": 31
+          "y": 25
         },
         "id": 27,
         "options": {
@@ -1479,8 +1408,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "green",
-                  "value": null
+                  "color": "green"
                 },
                 {
                   "color": "red",
@@ -1495,7 +1423,7 @@
           "h": 8,
           "w": 12,
           "x": 0,
-          "y": 39
+          "y": 33
         },
         "id": 28,
         "options": {
@@ -1573,8 +1501,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "green",
-                  "value": null
+                  "color": "green"
                 },
                 {
                   "color": "red",
@@ -1590,7 +1517,7 @@
           "h": 8,
           "w": 12,
           "x": 12,
-          "y": 39
+          "y": 33
         },
         "id": 29,
         "options": {
@@ -1669,8 +1596,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "green",
-                  "value": null
+                  "color": "green"
                 },
                 {
                   "color": "red",
@@ -1686,7 +1612,7 @@
           "h": 8,
           "w": 12,
           "x": 0,
-          "y": 47
+          "y": 41
         },
         "id": 30,
         "options": {
@@ -1768,8 +1694,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "green",
-                  "value": null
+                  "color": "green"
                 },
                 {
                   "color": "red",
@@ -1785,7 +1710,7 @@
           "h": 8,
           "w": 12,
           "x": 12,
-          "y": 47
+          "y": 41
         },
         "id": 31,
         "options": {
@@ -1867,8 +1792,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "green",
-                  "value": null
+                  "color": "green"
                 },
                 {
                   "color": "red",
@@ -1884,7 +1808,7 @@
           "h": 8,
           "w": 12,
           "x": 0,
-          "y": 55
+          "y": 49
         },
         "id": 32,
         "options": {
@@ -1963,8 +1887,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "green",
-                  "value": null
+                  "color": "green"
                 },
                 {
                   "color": "red",
@@ -1980,7 +1903,7 @@
           "h": 8,
           "w": 12,
           "x": 12,
-          "y": 55
+          "y": 49
         },
         "id": 33,
         "options": {
@@ -2059,8 +1982,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "green",
-                  "value": null
+                  "color": "green"
                 },
                 {
                   "color": "red",
@@ -2076,7 +1998,7 @@
           "h": 8,
           "w": 12,
           "x": 0,
-          "y": 63
+          "y": 57
         },
         "id": 34,
         "options": {
@@ -2155,8 +2077,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "green",
-                  "value": null
+                  "color": "green"
                 },
                 {
                   "color": "red",
@@ -2172,7 +2093,7 @@
           "h": 8,
           "w": 12,
           "x": 12,
-          "y": 63
+          "y": 57
         },
         "id": 35,
         "options": {
@@ -2251,8 +2172,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "green",
-                  "value": null
+                  "color": "green"
                 },
                 {
                   "color": "red",
@@ -2268,7 +2188,7 @@
           "h": 8,
           "w": 12,
           "x": 0,
-          "y": 71
+          "y": 65
         },
         "id": 36,
         "options": {
@@ -2347,8 +2267,7 @@
               "mode": "absolute",
               "steps": [
                 {
-                  "color": "green",
-                  "value": null
+                  "color": "green"
                 },
                 {
                   "color": "red",
@@ -2364,7 +2283,7 @@
           "h": 8,
           "w": 12,
           "x": 12,
-          "y": 71
+          "y": 65
         },
         "id": 37,
         "options": {
@@ -2403,7 +2322,7 @@
       "list": [
         {
           "current": {
-            "selected": true,
+            "selected": false,
             "text": "Proxmox",
             "value": "ed00438e-07e0-4b52-bd03-6aa59430054f"
           },
@@ -2423,7 +2342,7 @@
         },
         {
           "current": {
-            "selected": true,
+            "selected": false,
             "text": "proxmox",
             "value": "proxmox"
           },
