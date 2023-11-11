@@ -1,0 +1,35 @@
+version: '3.7'
+
+services:
+  wishthis:
+    container_name: wishthis
+    restart: unless-stopped
+    image: hiob/wishthis:stable
+    environment:
+      - VIRTUAL_HOST=sub.domain.ext
+    ports:
+      - 8886:80
+    volumes:
+      - ./config.php:/var/www/html/src/config/config.php
+    networks:
+      - wishthis
+      
+  mariadb:
+    container_name: db
+    restart: unless-stopped
+    image: mariadb
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: wishthis
+      MARIADB_USER: root
+      MARIADB_PASSWORD: root
+    volumes:
+      - ./data:/var/lib/mysql
+    ports:
+      - 3306:3306
+    networks:
+      - wishthis
+
+networks:
+  wishthis:
+    external: true
