@@ -1,0 +1,12 @@
+---
+- name: Test Connection
+  hosts: debian
+  become: yes  # sudo run
+
+  tasks:
+    - name: Gather system facts
+      setup:
+
+    - name: Display system information
+      debug:
+        var: ansible_facts.system_info
