@@ -1,4 +1,5 @@
 # HomeLab
+![image](Docs/Img/HomeLab.png)
 
 ## Ansible
 Update Debian hosts:
@@ -14,6 +15,7 @@ ansible-playbook -i hosts /etc/ansible/grafana_stack/install_monitoring.yml
 ### Dashboards
 * [Node Exporter Full](https://grafana.com/grafana/dashboards/1860) For VMs and LXC containers
 * [Proxmox Cluster [Flux]](https://grafana.com/grafana/dashboards/15356) For Proxmox
+* [Monitor PI-HOLE ](https://grafana.com/grafana/dashboards/19760-monitor-pi-hole-sparta) For Pi-Hole
 
 ## Backups
 Local backup jobs by schedule + [Duplicati](https://www.duplicati.com/) encrypted backups to Google Drive (temporarily)
