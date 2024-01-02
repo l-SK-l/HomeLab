@@ -2514,8 +2514,7 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green",
-                      "value": null
+                      "color": "green"
                     },
                     {
                       "color": "red",
@@ -2652,7 +2651,7 @@
               "h": 12,
               "w": 12,
               "x": 0,
-              "y": 21
+              "y": 29
             },
             "id": 3,
             "links": [],
@@ -2844,8 +2843,7 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green",
-                      "value": null
+                      "color": "green"
                     },
                     {
                       "color": "red",
@@ -3162,7 +3160,7 @@
               "h": 12,
               "w": 12,
               "x": 12,
-              "y": 21
+              "y": 29
             },
             "id": 24,
             "links": [],
@@ -3354,8 +3352,7 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green",
-                      "value": null
+                      "color": "green"
                     },
                     {
                       "color": "red",
@@ -3444,7 +3441,7 @@
               "h": 12,
               "w": 12,
               "x": 0,
-              "y": 33
+              "y": 41
             },
             "id": 84,
             "links": [],
@@ -3545,8 +3542,7 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green",
-                      "value": null
+                      "color": "green"
                     },
                     {
                       "color": "red",
@@ -3562,7 +3558,7 @@
               "h": 12,
               "w": 12,
               "x": 12,
-              "y": 33
+              "y": 41
             },
             "id": 156,
             "links": [],
@@ -3650,8 +3646,7 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green",
-                      "value": null
+                      "color": "green"
                     },
                     {
                       "color": "red",
@@ -3995,7 +3990,7 @@
               "h": 12,
               "w": 12,
               "x": 0,
-              "y": 45
+              "y": 53
             },
             "id": 229,
             "links": [],
@@ -4093,8 +4088,7 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green",
-                      "value": null
+                      "color": "green"
                     },
                     {
                       "color": "red",
@@ -4225,7 +4219,7 @@
               "h": 12,
               "w": 12,
               "x": 12,
-              "y": 45
+              "y": 53
             },
             "id": 42,
             "links": [],
@@ -4328,8 +4322,7 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green",
-                      "value": null
+                      "color": "green"
                     },
                     {
                       "color": "red",
@@ -4373,7 +4366,7 @@
               "h": 12,
               "w": 12,
               "x": 0,
-              "y": 57
+              "y": 65
             },
             "id": 127,
             "links": [],
@@ -4462,8 +4455,7 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green",
-                      "value": null
+                      "color": "green"
                     },
                     {
                       "color": "red",
@@ -4510,7 +4502,7 @@
               "h": 12,
               "w": 12,
               "x": 12,
-              "y": 57
+              "y": 65
             },
             "id": 319,
             "options": {
@@ -4905,7 +4897,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 54
+              "y": 62
             },
             "id": 136,
             "links": [],
@@ -5295,7 +5287,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 54
+              "y": 62
             },
             "id": 135,
             "links": [],
@@ -5666,7 +5658,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 64
+              "y": 72
             },
             "id": 191,
             "links": [],
@@ -6095,7 +6087,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 64
+              "y": 72
             },
             "id": 130,
             "links": [],
@@ -6501,7 +6493,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 74
+              "y": 82
             },
             "id": 138,
             "links": [],
@@ -6928,7 +6920,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 74
+              "y": 82
             },
             "id": 131,
             "links": [],
@@ -7313,7 +7305,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 84
+              "y": 92
             },
             "id": 70,
             "links": [],
@@ -7698,7 +7690,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 84
+              "y": 92
             },
             "id": 159,
             "links": [],
@@ -8084,7 +8076,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 94
+              "y": 102
             },
             "id": 129,
             "links": [],
@@ -8454,7 +8446,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 94
+              "y": 102
             },
             "id": 160,
             "links": [],
@@ -8841,7 +8833,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 104
+              "y": 112
             },
             "id": 140,
             "links": [],
@@ -9237,7 +9229,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 104
+              "y": 112
             },
             "id": 71,
             "links": [],
@@ -9621,7 +9613,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 114
+              "y": 122
             },
             "id": 128,
             "links": [],
@@ -10004,7 +9996,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 114
+              "y": 122
             },
             "id": 137,
             "links": [],
@@ -10405,7 +10397,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 124
+              "y": 132
             },
             "id": 132,
             "links": [],
@@ -10546,7 +10538,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 41
+              "y": 49
             },
             "id": 176,
             "links": [],
@@ -10672,7 +10664,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 41
+              "y": 49
             },
             "id": 22,
             "links": [],
@@ -11061,7 +11053,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 51
+              "y": 59
             },
             "id": 175,
             "links": [],
@@ -11474,7 +11466,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 51
+              "y": 59
             },
             "id": 307,
             "links": [],
@@ -11620,7 +11612,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 56
+              "y": 64
             },
             "id": 260,
             "links": [],
@@ -11752,7 +11744,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 56
+              "y": 64
             },
             "id": 291,
             "links": [],
@@ -11871,7 +11863,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 66
+              "y": 74
             },
             "id": 168,
             "links": [],
@@ -11987,7 +11979,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 66
+              "y": 74
             },
             "id": 294,
             "links": [],
@@ -12130,7 +12122,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 43
+              "y": 51
             },
             "id": 62,
             "links": [],
@@ -12244,7 +12236,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 43
+              "y": 51
             },
             "id": 315,
             "links": [],
@@ -12347,7 +12339,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 53
+              "y": 61
             },
             "id": 148,
             "links": [],
@@ -12463,7 +12455,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 53
+              "y": 61
             },
             "id": 149,
             "links": [],
@@ -12625,7 +12617,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 63
+              "y": 71
             },
             "id": 313,
             "links": [],
@@ -12753,7 +12745,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 63
+              "y": 71
             },
             "id": 305,
             "links": [],
@@ -12889,7 +12881,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 73
+              "y": 81
             },
             "id": 314,
             "links": [],
@@ -13032,7 +13024,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 26
+              "y": 34
             },
             "id": 8,
             "links": [],
@@ -13147,7 +13139,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 26
+              "y": 34
             },
             "id": 7,
             "links": [],
@@ -13348,7 +13340,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 36
+              "y": 44
             },
             "id": 321,
             "links": [],
@@ -13549,7 +13541,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 36
+              "y": 44
             },
             "id": 322,
             "links": [],
@@ -13752,7 +13744,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 46
+              "y": 54
             },
             "id": 259,
             "links": [],
@@ -13854,7 +13846,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 46
+              "y": 54
             },
             "id": 306,
             "links": [],
@@ -13957,7 +13949,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 56
+              "y": 64
             },
             "id": 151,
             "links": [],
@@ -14058,7 +14050,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 56
+              "y": 64
             },
             "id": 308,
             "links": [],
@@ -14181,7 +14173,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 66
+              "y": 74
             },
             "id": 64,
             "links": [],
@@ -14408,7 +14400,7 @@
             "refId": "A"
           }
         ],
-        "title": "Hardware temperature monitor",
+        "title": "Temperature monitor CPU",
         "type": "timeseries"
       },
       {
@@ -14681,6 +14673,7 @@
                   "mode": "palette-classic"
                 },
                 "custom": {
+                  "axisBorderShow": false,
                   "axisCenteredZero": false,
                   "axisColorMode": "text",
                   "axisLabel": "counter",
@@ -14694,6 +14687,7 @@
                     "tooltip": false,
                     "viz": false
                   },
+                  "insertNulls": false,
                   "lineInterpolation": "linear",
                   "lineWidth": 1,
                   "pointSize": 5,
@@ -14717,7 +14711,8 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green"
+                      "color": "green",
+                      "value": null
                     },
                     {
                       "color": "red",
@@ -14733,7 +14728,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 46
+              "y": 56
             },
             "id": 297,
             "links": [],
@@ -14784,6 +14779,7 @@
                   "mode": "palette-classic"
                 },
                 "custom": {
+                  "axisBorderShow": false,
                   "axisCenteredZero": false,
                   "axisColorMode": "text",
                   "axisLabel": "counter",
@@ -14797,6 +14793,7 @@
                     "tooltip": false,
                     "viz": false
                   },
+                  "insertNulls": false,
                   "lineInterpolation": "linear",
                   "lineWidth": 1,
                   "pointSize": 5,
@@ -14819,7 +14816,8 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green"
+                      "color": "green",
+                      "value": null
                     },
                     {
                       "color": "red",
@@ -14911,7 +14909,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 46
+              "y": 56
             },
             "id": 298,
             "links": [],
@@ -15042,6 +15040,7 @@
                   "mode": "palette-classic"
                 },
                 "custom": {
+                  "axisBorderShow": false,
                   "axisCenteredZero": false,
                   "axisColorMode": "text",
                   "axisLabel": "IO read (-) / write (+)",
@@ -15055,6 +15054,7 @@
                     "tooltip": false,
                     "viz": false
                   },
+                  "insertNulls": false,
                   "lineInterpolation": "linear",
                   "lineWidth": 1,
                   "pointSize": 5,
@@ -15077,7 +15077,8 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green"
+                      "color": "green",
+                      "value": null
                     },
                     {
                       "color": "red",
@@ -15406,7 +15407,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 47
+              "y": 57
             },
             "id": 9,
             "links": [],
@@ -15467,6 +15468,7 @@
                   "mode": "palette-classic"
                 },
                 "custom": {
+                  "axisBorderShow": false,
                   "axisCenteredZero": false,
                   "axisColorMode": "text",
                   "axisLabel": "bytes read (-) / write (+)",
@@ -15480,6 +15482,7 @@
                     "tooltip": false,
                     "viz": false
                   },
+                  "insertNulls": false,
                   "lineInterpolation": "linear",
                   "lineWidth": 1,
                   "pointSize": 5,
@@ -15502,7 +15505,8 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green"
+                      "color": "green",
+                      "value": null
                     },
                     {
                       "color": "red",
@@ -15831,7 +15835,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 47
+              "y": 57
             },
             "id": 33,
             "links": [],
@@ -15894,6 +15898,7 @@
                   "mode": "palette-classic"
                 },
                 "custom": {
+                  "axisBorderShow": false,
                   "axisCenteredZero": false,
                   "axisColorMode": "text",
                   "axisLabel": "time. read (-) / write (+)",
@@ -15907,6 +15912,7 @@
                     "tooltip": false,
                     "viz": false
                   },
+                  "insertNulls": false,
                   "lineInterpolation": "linear",
                   "lineWidth": 1,
                   "pointSize": 5,
@@ -15929,7 +15935,8 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green"
+                      "color": "green",
+                      "value": null
                     },
                     {
                       "color": "red",
@@ -16258,7 +16265,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 57
+              "y": 67
             },
             "id": 37,
             "links": [],
@@ -16323,6 +16330,7 @@
                   "mode": "palette-classic"
                 },
                 "custom": {
+                  "axisBorderShow": false,
                   "axisCenteredZero": false,
                   "axisColorMode": "text",
                   "axisLabel": "aqu-sz",
@@ -16336,6 +16344,7 @@
                     "tooltip": false,
                     "viz": false
                   },
+                  "insertNulls": false,
                   "lineInterpolation": "linear",
                   "lineWidth": 1,
                   "pointSize": 5,
@@ -16359,7 +16368,8 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green"
+                      "color": "green",
+                      "value": null
                     },
                     {
                       "color": "red",
@@ -16676,7 +16686,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 57
+              "y": 67
             },
             "id": 35,
             "links": [],
@@ -16727,6 +16737,7 @@
                   "mode": "palette-classic"
                 },
                 "custom": {
+                  "axisBorderShow": false,
                   "axisCenteredZero": false,
                   "axisColorMode": "text",
                   "axisLabel": "I/Os",
@@ -16740,6 +16751,7 @@
                     "tooltip": false,
                     "viz": false
                   },
+                  "insertNulls": false,
                   "lineInterpolation": "linear",
                   "lineWidth": 1,
                   "pointSize": 5,
@@ -16762,7 +16774,8 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green"
+                      "color": "green",
+                      "value": null
                     },
                     {
                       "color": "red",
@@ -17091,7 +17104,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 67
+              "y": 77
             },
             "id": 133,
             "links": [],
@@ -17152,6 +17165,7 @@
                   "mode": "palette-classic"
                 },
                 "custom": {
+                  "axisBorderShow": false,
                   "axisCenteredZero": false,
                   "axisColorMode": "text",
                   "axisLabel": "%util",
@@ -17165,6 +17179,7 @@
                     "tooltip": false,
                     "viz": false
                   },
+                  "insertNulls": false,
                   "lineInterpolation": "linear",
                   "lineWidth": 1,
                   "pointSize": 5,
@@ -17188,7 +17203,8 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green"
+                      "color": "green",
+                      "value": null
                     },
                     {
                       "color": "red",
@@ -17505,7 +17521,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 67
+              "y": 77
             },
             "id": 36,
             "links": [],
@@ -17568,6 +17584,7 @@
                   "mode": "palette-classic"
                 },
                 "custom": {
+                  "axisBorderShow": false,
                   "axisCenteredZero": false,
                   "axisColorMode": "text",
                   "axisLabel": "Outstanding req.",
@@ -17581,6 +17598,7 @@
                     "tooltip": false,
                     "viz": false
                   },
+                  "insertNulls": false,
                   "lineInterpolation": "linear",
                   "lineWidth": 1,
                   "pointSize": 5,
@@ -17604,7 +17622,8 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green"
+                      "color": "green",
+                      "value": null
                     },
                     {
                       "color": "red",
@@ -17921,7 +17940,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 77
+              "y": 87
             },
             "id": 34,
             "links": [],
@@ -17972,6 +17991,7 @@
                   "mode": "palette-classic"
                 },
                 "custom": {
+                  "axisBorderShow": false,
                   "axisCenteredZero": false,
                   "axisColorMode": "text",
                   "axisLabel": "IOs",
@@ -17985,6 +18005,7 @@
                     "tooltip": false,
                     "viz": false
                   },
+                  "insertNulls": false,
                   "lineInterpolation": "linear",
                   "lineWidth": 1,
                   "pointSize": 5,
@@ -18007,7 +18028,8 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green"
+                      "color": "green",
+                      "value": null
                     },
                     {
                       "color": "red",
@@ -18324,7 +18346,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 77
+              "y": 87
             },
             "id": 301,
             "links": [],
@@ -18414,6 +18436,7 @@
                   "mode": "palette-classic"
                 },
                 "custom": {
+                  "axisBorderShow": false,
                   "axisCenteredZero": false,
                   "axisColorMode": "text",
                   "axisLabel": "bytes",
@@ -18427,6 +18450,7 @@
                     "tooltip": false,
                     "viz": false
                   },
+                  "insertNulls": false,
                   "lineInterpolation": "linear",
                   "lineWidth": 1,
                   "pointSize": 5,
@@ -18450,7 +18474,8 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green"
+                      "color": "green",
+                      "value": null
                     },
                     {
                       "color": "red",
@@ -18466,7 +18491,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 62
+              "y": 98
             },
             "id": 43,
             "links": [],
@@ -18545,6 +18570,7 @@
                   "mode": "palette-classic"
                 },
                 "custom": {
+                  "axisBorderShow": false,
                   "axisCenteredZero": false,
                   "axisColorMode": "text",
                   "axisLabel": "file nodes",
@@ -18558,6 +18584,7 @@
                     "tooltip": false,
                     "viz": false
                   },
+                  "insertNulls": false,
                   "lineInterpolation": "linear",
                   "lineWidth": 1,
                   "pointSize": 5,
@@ -18581,7 +18608,8 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green"
+                      "color": "green",
+                      "value": null
                     },
                     {
                       "color": "red",
@@ -18597,7 +18625,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 62
+              "y": 98
             },
             "id": 41,
             "links": [],
@@ -18649,6 +18677,7 @@
                   "mode": "palette-classic"
                 },
                 "custom": {
+                  "axisBorderShow": false,
                   "axisCenteredZero": false,
                   "axisColorMode": "text",
                   "axisLabel": "files",
@@ -18662,6 +18691,7 @@
                     "tooltip": false,
                     "viz": false
                   },
+                  "insertNulls": false,
                   "lineInterpolation": "linear",
                   "lineWidth": 1,
                   "pointSize": 5,
@@ -18685,7 +18715,8 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green"
+                      "color": "green",
+                      "value": null
                     },
                     {
                       "color": "red",
@@ -18701,7 +18732,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 72
+              "y": 108
             },
             "id": 28,
             "links": [],
@@ -18764,6 +18795,7 @@
                   "mode": "palette-classic"
                 },
                 "custom": {
+                  "axisBorderShow": false,
                   "axisCenteredZero": false,
                   "axisColorMode": "text",
                   "axisLabel": "file Nodes",
@@ -18777,6 +18809,7 @@
                     "tooltip": false,
                     "viz": false
                   },
+                  "insertNulls": false,
                   "lineInterpolation": "linear",
                   "lineWidth": 1,
                   "pointSize": 5,
@@ -18800,7 +18833,8 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green"
+                      "color": "green",
+                      "value": null
                     },
                     {
                       "color": "red",
@@ -18816,7 +18850,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 72
+              "y": 108
             },
             "id": 219,
             "links": [],
@@ -18868,6 +18902,7 @@
                   "mode": "palette-classic"
                 },
                 "custom": {
+                  "axisBorderShow": false,
                   "axisCenteredZero": false,
                   "axisColorMode": "text",
                   "axisLabel": "counter",
@@ -18881,6 +18916,7 @@
                     "tooltip": false,
                     "viz": false
                   },
+                  "insertNulls": false,
                   "lineInterpolation": "linear",
                   "lineWidth": 1,
                   "pointSize": 5,
@@ -18905,7 +18941,8 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green"
+                      "color": "green",
+                      "value": null
                     },
                     {
                       "color": "red",
@@ -18937,7 +18974,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 82
+              "y": 118
             },
             "id": 44,
             "links": [],
@@ -19151,7 +19188,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 47
+              "y": 55
             },
             "id": 60,
             "links": [],
@@ -19280,7 +19317,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 47
+              "y": 55
             },
             "id": 142,
             "links": [],
@@ -19407,7 +19444,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 57
+              "y": 65
             },
             "id": 143,
             "links": [],
@@ -19534,7 +19571,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 57
+              "y": 65
             },
             "id": 141,
             "links": [],
@@ -19661,7 +19698,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 67
+              "y": 75
             },
             "id": 146,
             "links": [],
@@ -19776,7 +19813,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 67
+              "y": 75
             },
             "id": 144,
             "links": [],
@@ -19903,7 +19940,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 77
+              "y": 85
             },
             "id": 145,
             "links": [],
@@ -20006,7 +20043,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 77
+              "y": 85
             },
             "id": 231,
             "links": [],
@@ -20121,7 +20158,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 87
+              "y": 95
             },
             "id": 232,
             "links": [],
@@ -20244,7 +20281,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 87
+              "y": 95
             },
             "id": 61,
             "links": [],
@@ -20358,7 +20395,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 97
+              "y": 105
             },
             "id": 230,
             "links": [],
@@ -20461,7 +20498,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 97
+              "y": 105
             },
             "id": 288,
             "links": [],
@@ -20564,7 +20601,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 107
+              "y": 115
             },
             "id": 280,
             "links": [],
@@ -20667,7 +20704,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 107
+              "y": 115
             },
             "id": 289,
             "links": [],
@@ -20781,7 +20818,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 117
+              "y": 125
             },
             "id": 290,
             "links": [],
@@ -20897,7 +20934,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 117
+              "y": 125
             },
             "id": 310,
             "links": [],
@@ -21000,7 +21037,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 127
+              "y": 135
             },
             "id": 309,
             "links": [],
@@ -21141,7 +21178,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 48
+              "y": 56
             },
             "id": 63,
             "links": [],
@@ -21298,7 +21335,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 48
+              "y": 56
             },
             "id": 124,
             "links": [],
@@ -21428,7 +21465,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 58
+              "y": 66
             },
             "id": 125,
             "links": [],
@@ -21545,7 +21582,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 58
+              "y": 66
             },
             "id": 220,
             "links": [],
@@ -21673,7 +21710,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 68
+              "y": 76
             },
             "id": 126,
             "links": [],
@@ -21816,7 +21853,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 49
+              "y": 57
             },
             "id": 221,
             "links": [],
@@ -21932,7 +21969,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 49
+              "y": 57
             },
             "id": 81,
             "links": [],
@@ -22048,7 +22085,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 59
+              "y": 67
             },
             "id": 115,
             "links": [],
@@ -22176,7 +22213,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 59
+              "y": 67
             },
             "id": 50,
             "links": [],
@@ -22303,7 +22340,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 69
+              "y": 77
             },
             "id": 55,
             "links": [],
@@ -22418,7 +22455,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 69
+              "y": 77
             },
             "id": 109,
             "links": [],
@@ -22594,7 +22631,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 79
+              "y": 87
             },
             "id": 299,
             "links": [],
@@ -22712,7 +22749,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 79
+              "y": 87
             },
             "id": 104,
             "links": [],
@@ -22893,7 +22930,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 89
+              "y": 97
             },
             "id": 85,
             "links": [],
@@ -23024,7 +23061,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 89
+              "y": 97
             },
             "id": 91,
             "links": [],
@@ -23156,7 +23193,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 99
+              "y": 107
             },
             "id": 82,
             "links": [],
@@ -23269,7 +23306,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 99
+              "y": 107
             },
             "id": 320,
             "links": [],
@@ -23398,6 +23435,7 @@
                   "mode": "palette-classic"
                 },
                 "custom": {
+                  "axisBorderShow": false,
                   "axisCenteredZero": false,
                   "axisColorMode": "text",
                   "axisLabel": "seconds",
@@ -23411,6 +23449,7 @@
                     "tooltip": false,
                     "viz": false
                   },
+                  "insertNulls": false,
                   "lineInterpolation": "linear",
                   "lineWidth": 1,
                   "pointSize": 5,
@@ -23433,7 +23472,8 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green"
+                      "color": "green",
+                      "value": null
                     },
                     {
                       "color": "red",
@@ -23449,7 +23489,7 @@
               "h": 10,
               "w": 12,
               "x": 0,
-              "y": 66
+              "y": 132
             },
             "id": 40,
             "links": [],
@@ -23502,6 +23542,7 @@
                   "mode": "palette-classic"
                 },
                 "custom": {
+                  "axisBorderShow": false,
                   "axisCenteredZero": false,
                   "axisColorMode": "text",
                   "axisLabel": "counter",
@@ -23515,6 +23556,7 @@
                     "tooltip": false,
                     "viz": false
                   },
+                  "insertNulls": false,
                   "lineInterpolation": "linear",
                   "lineStyle": {
                     "fill": "solid"
@@ -23540,7 +23582,8 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "green"
+                      "color": "green",
+                      "value": null
                     },
                     {
                       "color": "red",
@@ -23576,7 +23619,7 @@
               "h": 10,
               "w": 12,
               "x": 12,
-              "y": 66
+              "y": 132
             },
             "id": 157,
             "links": [],
