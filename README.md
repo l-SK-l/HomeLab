@@ -23,3 +23,6 @@ Local backup jobs by schedule + [Duplicati](https://www.duplicati.com/) encrypte
 
 ## Public domains
 [Cloudflare tunnel](https://www.cloudflare.com/products/tunnel/) + [Nginx Proxy Manager](https://nginxproxymanager.com/) provides easy access to the homelab from the internet with HTTPS and strict allow policys
+
+## Promts for Chat GPT
+[Masks for NextChat](Docs/ai-masks.json)
