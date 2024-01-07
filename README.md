@@ -1,5 +1,5 @@
 # HomeLab
-![image](Docs/Img/HomeLab.png)
+![image](Docs/Img/HomeLab.jpg)
 
 ## Ansible
 Update Debian hosts:
