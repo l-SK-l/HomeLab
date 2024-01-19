@@ -114,9 +114,10 @@
           },
           "showThresholdLabels": true,
           "showThresholdMarkers": true,
+          "sizing": "auto",
           "text": {}
         },
-        "pluginVersion": "10.2.0",
+        "pluginVersion": "10.2.3",
         "targets": [
           {
             "datasource": {
@@ -187,9 +188,10 @@
             "values": false
           },
           "text": {},
-          "textMode": "auto"
+          "textMode": "auto",
+          "wideLayout": true
         },
-        "pluginVersion": "10.2.0",
+        "pluginVersion": "10.2.3",
         "targets": [
           {
             "datasource": {
@@ -250,9 +252,10 @@
             "values": false
           },
           "text": {},
-          "textMode": "auto"
+          "textMode": "auto",
+          "wideLayout": true
         },
-        "pluginVersion": "10.2.0",
+        "pluginVersion": "10.2.3",
         "targets": [
           {
             "datasource": {
@@ -315,9 +318,10 @@
             "values": false
           },
           "text": {},
-          "textMode": "auto"
+          "textMode": "auto",
+          "wideLayout": true
         },
-        "pluginVersion": "10.2.0",
+        "pluginVersion": "10.2.3",
         "targets": [
           {
             "datasource": {
@@ -380,9 +384,10 @@
             "values": false
           },
           "text": {},
-          "textMode": "auto"
+          "textMode": "auto",
+          "wideLayout": true
         },
-        "pluginVersion": "10.2.0",
+        "pluginVersion": "10.2.3",
         "targets": [
           {
             "datasource": {
@@ -436,10 +441,11 @@
         "id": 14,
         "options": {
           "displayMode": "gradient",
+          "maxVizHeight": 300,
           "minVizHeight": 10,
           "minVizWidth": 0,
           "namePlacement": "auto",
-          "orientation": "horizontal",
+          "orientation": "vertical",
           "reduceOptions": {
             "calcs": [
               "lastNotNull"
@@ -448,10 +454,11 @@
             "values": false
           },
           "showUnfilled": true,
+          "sizing": "auto",
           "text": {},
           "valueMode": "color"
         },
-        "pluginVersion": "10.2.0",
+        "pluginVersion": "10.2.3",
         "targets": [
           {
             "datasource": {
@@ -514,9 +521,10 @@
             "values": false
           },
           "text": {},
-          "textMode": "auto"
+          "textMode": "auto",
+          "wideLayout": true
         },
-        "pluginVersion": "10.2.0",
+        "pluginVersion": "10.2.3",
         "targets": [
           {
             "datasource": {
@@ -585,9 +593,10 @@
             "values": false
           },
           "text": {},
-          "textMode": "auto"
+          "textMode": "auto",
+          "wideLayout": true
         },
-        "pluginVersion": "10.2.0",
+        "pluginVersion": "10.2.3",
         "targets": [
           {
             "datasource": {
@@ -656,9 +665,10 @@
             "values": false
           },
           "text": {},
-          "textMode": "auto"
+          "textMode": "auto",
+          "wideLayout": true
         },
-        "pluginVersion": "10.2.0",
+        "pluginVersion": "10.2.3",
         "targets": [
           {
             "datasource": {
@@ -765,7 +775,7 @@
           },
           "showHeader": true
         },
-        "pluginVersion": "10.2.0",
+        "pluginVersion": "10.2.3",
         "targets": [
           {
             "datasource": {
@@ -877,7 +887,7 @@
           },
           "showHeader": true
         },
-        "pluginVersion": "10.2.0",
+        "pluginVersion": "10.2.3",
         "targets": [
           {
             "datasource": {
@@ -2328,7 +2338,7 @@
       }
     ],
     "refresh": "30s",
-    "schemaVersion": 38,
+    "schemaVersion": 39,
     "tags": [],
     "templating": {
       "list": [
