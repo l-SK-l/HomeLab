@@ -35,9 +35,16 @@ Hello, everyone! This is my little home lab. This is a temporary host for my edu
 * [Node Exporter Full](https://grafana.com/grafana/dashboards/1860) For VMs and LXC containers
 * [Proxmox Cluster [Flux]](https://grafana.com/grafana/dashboards/15356) For Proxmox
 * [Monitor PI-HOLE ](https://grafana.com/grafana/dashboards/19760-monitor-pi-hole-sparta) For Pi-Hole
+* [Speedtest Tracker v2](https://grafana.com/grafana/dashboards/17808-speedtest-tracker-v2-influxdbv2/) For Speedtest Tracker
+* [Uptime Kuma](https://grafana.com/grafana/dashboards/18667-uptime-kuma-metrics/) For Uptime Kuma
 
 ## Backups
-Local backup jobs by schedule + [Duplicati](https://www.duplicati.com/) encrypted backups to Google Drive
+Local backup jobs by schedule for VM/Containers and work laptope then encrypted backups using [Duplicati](https://www.duplicati.com/) to One Drive
+
+## Cronicle
+* [Proxmox VE LXC Updater](https://raw.githubusercontent.com/tteck/Proxmox/main/misc/update-lxcs.sh)
+* [Run upd Debians](ansible/upd_debian.yml)
+* [Run upd Docker containers](Docs/watchtower.sh)
 
 ## Public domains
 [Cloudflare tunnel](https://www.cloudflare.com/products/tunnel/) + [Nginx Proxy Manager](https://nginxproxymanager.com/) provides easy access to the homelab from the internet with HTTPS and strict allow policys
