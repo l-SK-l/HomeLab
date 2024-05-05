@@ -23669,8 +23669,8 @@
         {
           "current": {
             "selected": false,
-            "text": "default",
-            "value": "default"
+            "text": "Prometheus",
+            "value": "c711dd05-4979-4535-b1da-f3cc91d2b4ea"
           },
           "hide": 0,
           "includeAll": false,
@@ -23685,7 +23685,11 @@
           "type": "datasource"
         },
         {
-          "current": {},
+          "current": {
+            "selected": false,
+            "text": "ansible.elfacloud.com",
+            "value": "ansible.elfacloud.com"
+          },
           "datasource": {
             "type": "prometheus",
             "uid": "c711dd05-4979-4535-b1da-f3cc91d2b4ea"
@@ -23711,7 +23715,11 @@
           "useTags": false
         },
         {
-          "current": {},
+          "current": {
+            "selected": false,
+            "text": "ansible.elfacloud.com:9100",
+            "value": "ansible.elfacloud.com:9100"
+          },
           "datasource": {
             "type": "prometheus",
             "uid": "c711dd05-4979-4535-b1da-f3cc91d2b4ea"
