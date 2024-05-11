@@ -28,6 +28,7 @@ Hello, everyone! This is my little home lab. This is a temporary host for my edu
 - [Uptime-kuma](https://github.com/louislam/uptime-kuma)
 - [Cronicle](https://github.com/jhuckaby/Cronicle)
 - [Speedtest Tracker](https://github.com/alexjustesen/speedtest-tracker)
+- [Gotify](https://gotify.net/)
 
 ## Grafana
 [![grafana](Docs/Img/grafana.gif)]()
@@ -45,6 +46,9 @@ Local backup jobs by schedule for VM/Containers and work laptope then encrypted 
 * [Proxmox VE LXC Updater](https://raw.githubusercontent.com/tteck/Proxmox/main/misc/update-lxcs.sh)
 * [Run upd Debians](ansible/upd_debian.yml)
 * [Run upd Docker containers](Docs/watchtower.sh)
+
+## Gotify
+Alerts from Proxmox, Cronicle and Uptime-kuma
 
 ## Public domains
 [Cloudflare tunnel](https://www.cloudflare.com/products/tunnel/) + [Nginx Proxy Manager](https://nginxproxymanager.com/) provides easy access to the homelab from the internet with HTTPS and strict allow policys
