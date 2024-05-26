@@ -29,6 +29,7 @@ Hello, everyone! This is my little home lab. This is a temporary host for my edu
 - [Cronicle](https://github.com/jhuckaby/Cronicle)
 - [Speedtest Tracker](https://github.com/alexjustesen/speedtest-tracker)
 - [Gotify](https://gotify.net/)
+- [Heimdall](https://github.com/linuxserver/Heimdall)
 
 ## Grafana
 [![grafana](Docs/Img/grafana.gif)]()
@@ -41,6 +42,9 @@ Hello, everyone! This is my little home lab. This is a temporary host for my edu
 
 ## Backups
 Local backup jobs by schedule for VM/Containers and work laptope then encrypted backups using [Duplicati](https://www.duplicati.com/) to One Drive
+
+## Heimdall
+[![Heimdall](Docs/Img/Heimdall.png)]()
 
 ## Cronicle
 * [Proxmox VE LXC Updater](https://raw.githubusercontent.com/tteck/Proxmox/main/misc/update-lxcs.sh)
