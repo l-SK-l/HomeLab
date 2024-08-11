@@ -7,13 +7,19 @@ ansible               ansible_connection=local
 
 # Uncomment & replace the following with the names of your managed Windows servers
 [debian]
-pve.elfacloud.com ansible_user=USER ansible_password=PASSWORD
-ansible.elfacloud.com ansible_user=USER ansible_password=PASSWORD
-docker.elfacloud.com ansible_user=USER ansible_password=PASSWORD
-nginx.elfacloud.com ansible_user=USER ansible_password=PASSWORD
-influxdb.elfacloud.com ansible_user=USER ansible_password=PASSWORD
-pihole.elfacloud.com ansible_user=USER ansible_password=PASSWORD
-grafana.elfacloud.com ansible_user=USER ansible_password=PASSWORD
+pve.domen.local ansible_user=USER ansible_password=PASSWORD
+ansible.domen.local ansible_user=USER ansible_password=PASSWORD
+docker.domen.local ansible_user=USER ansible_password=PASSWORD
+docker2.domen.local ansible_user=USER ansible_password=PASSWORD
+nginx.domen.local ansible_user=USER ansible_password=PASSWORD
+influxdb.domen.local ansible_user=USER ansible_password=PASSWORD
+pihole.domen.local ansible_user=USER ansible_password=PASSWORD
+grafana.domen.local ansible_user=USER ansible_password=PASSWORD
+gotify.domen.local ansible_user=USER ansible_password=PASSWORD
 
 [influxdb]
-influxdb.elfacloud.com ansible_user=USER ansible_password=PASSWORD
+influxdb.domen.local ansible_user=USER ansible_password=PASSWORD
+
+[vpn]
+X.domen.local ansible_user=USER ansible_password=PASSWORD
+Y.domen.local ansible_user=USER ansible_password=PASSWORD
