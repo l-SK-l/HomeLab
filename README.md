@@ -32,6 +32,8 @@ Hello, everyone! This is my little home lab. This is a temporary host for my edu
 - [Heimdall](https://github.com/linuxserver/Heimdall)
 - [Scrutiny](https://github.com/AnalogJ/scrutiny)
 - [ConvertX](https://github.com/C4illin/ConvertX)
+- [qBittorrent](https://www.qbittorrent.org/)
+- [Paperless-ngx](https://docs.paperless-ngx.com/)
 
 ## Grafana
 [![grafana](Docs/Img/grafana.gif)]()
