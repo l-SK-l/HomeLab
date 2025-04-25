@@ -1,15 +1,14 @@
 ---
 - name: Update Debian Packages
-  hosts: debian
-  become: yes
+  hosts: all
 
   tasks:
-    - name: Update package cache
-      apt:
-        update_cache: yes
+    - name: Update packages with apt
+      when: ansible_pkg_mgr == 'apt'
+      ansible.builtin.apt:
+        update_cache: true
 
-    - name: Upgrade all packages
-      apt:
+    - name: Upgrade packages with apt
+      when: ansible_pkg_mgr == 'apt'
+      ansible.builtin.apt:
         upgrade: dist
-        autoremove: yes
-        autoclean: yes

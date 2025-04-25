@@ -24,22 +24,20 @@ Hello, everyone! This is my little home lab. This is a temporary host for my edu
 - [Prometheus](https://prometheus.io/)
 - [It-tools](https://github.com/CorentinTh/it-tools)
 - [Stirling PDF](https://github.com/Stirling-Tools/Stirling-PDF)
-- [ChatGPT-Next-Web](https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web)
 - [Uptime-kuma](https://github.com/louislam/uptime-kuma)
 - [Cronicle](https://github.com/jhuckaby/Cronicle)
 - [Speedtest Tracker](https://github.com/alexjustesen/speedtest-tracker)
 - [Gotify](https://gotify.net/)
 - [Heimdall](https://github.com/linuxserver/Heimdall)
 - [Scrutiny](https://github.com/AnalogJ/scrutiny)
-- [ConvertX](https://github.com/C4illin/ConvertX)
+- [n8n](https://n8n.io/)
+- [Semaphore](https://semaphoreui.com/)
 
 ## Grafana
 [![grafana](Docs/Img/grafana.gif)]()
 ### Dashboards
 * [Node Exporter Full](https://grafana.com/grafana/dashboards/1860) For VMs and LXC containers
 * [Proxmox Cluster [Flux]](https://grafana.com/grafana/dashboards/15356) For Proxmox
-* [Monitor PI-HOLE ](https://grafana.com/grafana/dashboards/19760-monitor-pi-hole-sparta) For Pi-Hole
-* [Speedtest Tracker v2](https://grafana.com/grafana/dashboards/17808-speedtest-tracker-v2-influxdbv2/) For Speedtest Tracker
 * [Uptime Kuma](https://grafana.com/grafana/dashboards/18667-uptime-kuma-metrics/) For Uptime Kuma
 
 ## Backups
@@ -60,4 +58,4 @@ Local backup jobs by schedule for VM/Containers and work laptope then encrypted 
 Alerts from Proxmox, Cronicle, Uptime-kuma, Grafana, Diun and Scrutiny
 
 ## Public domains
-[Cloudflare tunnel](https://www.cloudflare.com/products/tunnel/) + [Nginx Proxy Manager](https://nginxproxymanager.com/) provides easy access to the homelab from the internet with HTTPS and strict allow policys + [Crowdsec](https://www.crowdsec.net/) as alternative fail2ban
+[Cloudflare tunnel](https://www.cloudflare.com/products/tunnel/) + [Nginx Proxy Manager](https://nginxproxymanager.com/) provides easy access to the homelab from the internet with HTTPS and strict allow policies + [Crowdsec](https://www.crowdsec.net/) as alternative fail2ban
