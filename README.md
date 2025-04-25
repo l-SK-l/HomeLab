@@ -32,6 +32,8 @@ Hello, everyone! This is my little home lab. This is a temporary host for my edu
 - [Scrutiny](https://github.com/AnalogJ/scrutiny)
 - [n8n](https://n8n.io/)
 - [Semaphore](https://semaphoreui.com/)
+- [qBittorrent](https://www.qbittorrent.org/)
+- [Paperless-ngx](https://docs.paperless-ngx.com/)
 
 ## Grafana
 [![grafana](Docs/Img/grafana.gif)]()
@@ -50,6 +52,8 @@ Local backup jobs by schedule for VM/Containers and work laptope then encrypted 
 * [Proxmox VE LXC Updater](https://raw.githubusercontent.com/tteck/Proxmox/main/misc/update-lxcs.sh)
 * [Run upd Debians --limit debian](ansible/upd_debian.yml)
 * [Run upd VPN --limit vpn](ansible/upd_debian.yml)
+* Docker containers update
+* Pi-hole update
 
 ## Scrutiny
 [![Scrutiny](Docs/Img/Scrutiny.png)]()
