@@ -1,0 +1,29 @@
+---
+- name: Update Pi-hole application
+  hosts: pihole
+  become: yes
+
+  tasks:
+    - name: Run pihole -up command
+      ansible.builtin.command: pihole -up
+      register: pihole_update_result
+      changed_when: >
+        pihole_update_result.rc == 0 and (
+          "Update complete!" in pihole_update_result.stdout or
+          "Pi-hole Core updated" in pihole_update_result.stdout or
+          "Web Interface updated" in pihole_update_result.stdout or
+          "FTL updated" in pihole_update_result.stdout or
+          "update available" in pihole_update_result.stderr
+        ) and not (
+          "Everything is up to date!" in pihole_update_result.stdout
+        )
+
+    - name: Display Pi-hole update output (optional)
+      ansible.builtin.debug:
+        var: pihole_update_result.stdout_lines
+      when: pihole_update_result.stdout is defined and pihole_update_result.stdout != ""
+
+    - name: Display Pi-hole update error output (optional)
+      ansible.builtin.debug:
+        var: pihole_update_result.stderr_lines
+      when: pihole_update_result.stderr is defined and pihole_update_result.stderr != ""
