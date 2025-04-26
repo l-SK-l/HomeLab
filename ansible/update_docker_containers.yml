@@ -1,0 +1,37 @@
+---
+- name: Run Watchtower once using existing structure
+  hosts: docker
+  remote_user: root
+  gather_facts: false
+
+  vars:
+    watchtower_name: "watchtower_run_once_{{ ansible_date_time.epoch }}"
+    watchtower_image: "containrrr/watchtower"
+    watchtower_docker_additional_options: {}
+
+  tasks:
+    - name: Ensure docker python library is installed
+      ansible.builtin.pip:
+        name: docker
+        state: present
+
+    - name: Set Watchtower container parameters for a single run
+      ansible.builtin.set_fact:
+        watchtower_container_parameters:
+          name: "{{ watchtower_name }}"
+          image: "{{ watchtower_image }}"
+          state: started
+          volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+          command: "--run-once"
+          auto_remove: true 
+          detach: false
+
+    - name: Create and run Watchtower container once
+      community.docker.docker_container: "{{ watchtower_container_parameters | combine(watchtower_docker_additional_options) }}"
+      register: watchtower_container_result
+
+    - name: Display Watchtower logs/output from the single run
+      ansible.builtin.debug:
+        msg: "{{ watchtower_container_result.container.Output }}"
+      when: watchtower_container_result.container is defined and watchtower_container_result.container.Output is defined
