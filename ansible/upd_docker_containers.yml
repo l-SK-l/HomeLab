@@ -1,0 +1,21 @@
+---
+- name: Run Watchtower once to update containers
+  hosts: docker
+  become: yes
+
+  tasks:
+    - name: Execute Watchtower one-time run command
+      ansible.builtin.command: >-
+        docker run -v /var/run/docker.sock:/var/run/docker.sock --rm containrrr/watchtower --run-once
+      register: watchtower_run_result
+      changed_when: "'Session done' in watchtower_run_result.stdout"
+
+    - name: Display Watchtower command output (optional)
+      ansible.builtin.debug:
+        var: watchtower_run_result.stdout_lines
+      when: watchtower_run_result.stdout is defined and watchtower_run_result.stdout != ""
+
+    - name: Display Watchtower command error output (optional)
+      ansible.builtin.debug:
+        var: watchtower_run_result.stderr_lines
+      when: watchtower_run_result.stderr is defined and watchtower_run_result.stderr != ""
