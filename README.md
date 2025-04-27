@@ -25,9 +25,7 @@ Hello, everyone! This is my little home lab. This is a temporary host for my edu
 - [It-tools](https://github.com/CorentinTh/it-tools)
 - [Stirling PDF](https://github.com/Stirling-Tools/Stirling-PDF)
 - [Uptime-kuma](https://github.com/louislam/uptime-kuma)
-- [Cronicle](https://github.com/jhuckaby/Cronicle)
 - [Speedtest Tracker](https://github.com/alexjustesen/speedtest-tracker)
-- [Gotify](https://gotify.net/)
 - [Heimdall](https://github.com/linuxserver/Heimdall)
 - [Scrutiny](https://github.com/AnalogJ/scrutiny)
 - [n8n](https://n8n.io/)
@@ -48,18 +46,15 @@ Local backup jobs by schedule for VM/Containers and work laptope then encrypted 
 ## Heimdall
 [![Heimdall](Docs/Img/Heimdall.png)]()
 
-## Cronicle
-* [Proxmox VE LXC Updater](https://raw.githubusercontent.com/tteck/Proxmox/main/misc/update-lxcs.sh)
-* [Run upd Debians --limit debian](ansible/upd_debian.yml)
-* [Run upd VPN --limit vpn](ansible/upd_debian.yml)
-* Docker containers update
-* Pi-hole update
+## Semaphore(Ansible)
+* [Debian update --limit debian](ansible/upd_debian.yml)
+* [VPNs update --limit vpn](ansible/upd_debian.yml)
+* [Update Docker --limit docker](ansible\upd_docker_containers.yml)
+* [PVE update --limit vpe](ansible/upd_debian.yml)
+* [Update Pi-hole --limit pihole](ansible\upd_pihole.yml)
 
 ## Scrutiny
 [![Scrutiny](Docs/Img/Scrutiny.png)]()
-
-## Gotify
-Alerts from Proxmox, Cronicle, Uptime-kuma, Grafana, Diun and Scrutiny
 
 ## Public domains
 [Cloudflare tunnel](https://www.cloudflare.com/products/tunnel/) + [Nginx Proxy Manager](https://nginxproxymanager.com/) provides easy access to the homelab from the internet with HTTPS and strict allow policies + [Crowdsec](https://www.crowdsec.net/) as alternative fail2ban

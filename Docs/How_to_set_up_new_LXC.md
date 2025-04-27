@@ -19,7 +19,7 @@ tar -C /opt -xvzf node_exporter-1.8.0.linux-amd64.tar.gz
 
 Create the logical link to the current node_exporter version:
 ```sh
-ln -s node_exporter-X.Y.Z.linux-amd64 /opt/node_exporter
+ln -s /opt/node_exporter-1.8.0.linux-amd64 /opt/node_exporter
 ```
 The logical link allows us to create systemd unit file without needing to update it each time we upgrade node_exporter.
 
