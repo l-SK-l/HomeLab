@@ -1,0 +1,28 @@
+---
+- name: Clean up unused Docker images
+  hosts: docker
+  become: yes
+
+  tasks:
+    - name: Remove all unused Docker images
+      ansible.builtin.shell: |
+        # Check if the docker command exists before running
+        if command -v docker &> /dev/null; then
+          echo "Starting cleanup of unused Docker images..."
+          docker image prune -a -f
+          echo "Cleanup finished."
+        else
+          echo "Docker command not found on the host. Skipping cleanup."
+          exit 0 # Exit successfully if docker is not installed
+        fi
+      args:
+        executable: /bin/bash
+      register: docker_prune_output
+      # Mark as 'changed' only if space was reclaimed (i.e., something was deleted)
+      changed_when: "'Total reclaimed space:' in docker_prune_output.stdout"
+      # Mark as 'failed' if the docker command failed, excluding the case where docker is not found
+      failed_when: "docker_prune_output.rc != 0 and 'command not found' not in docker_prune_output.stderr"
+
+    - name: Show cleanup results
+      ansible.builtin.debug:
+        msg: "{{ docker_prune_output.stdout }}"
