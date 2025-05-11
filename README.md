@@ -36,9 +36,7 @@ Hello, everyone! This is my little home lab. This is a temporary host for my edu
 ## Grafana
 [![grafana](Docs/Img/grafana.gif)]()
 ### Dashboards
-* [Node Exporter Full](https://grafana.com/grafana/dashboards/1860) For VMs and LXC containers
-* [Proxmox Cluster [Flux]](https://grafana.com/grafana/dashboards/15356) For Proxmox
-* [Uptime Kuma](https://grafana.com/grafana/dashboards/18667-uptime-kuma-metrics/) For Uptime Kuma
+Check [Grafana folder](grafana/) It syncs automatically.
 
 ## Backups
 Local backup jobs by schedule for VM/Containers and work laptope then encrypted backups using [Duplicati](https://www.duplicati.com/) to Google Disk
