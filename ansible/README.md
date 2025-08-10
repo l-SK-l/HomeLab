@@ -1,9 +1,12 @@
+# Ansible Configuration
+
 ## I use ansible via Semaphore UI
 Inventory and Key Store into Semaphore UI
 
 Playbooks from these repository
 
 ## ansible.cfg
+```ini
 [defaults]
 interpreter_python = auto_silent
 library         = ~/library/:/usr/share/ansible/library/
@@ -24,6 +27,7 @@ timeout = 10
 connect_timeout = 30
 connect_retries = 30
 connect_interval = 1
+```
 
-## Custom Webhook plagin
-ansible\webhook.py into /usr/share/ansible/plugins/callback_plugins/webhook.py
+## Custom Webhook Plugin
+Copy `ansible\webhook.py` to `/usr/share/ansible/plugins/callback_plugins/webhook.py`
