@@ -32,6 +32,7 @@ Hello, everyone! This is my little home lab. This is a temporary host for my edu
 - [Semaphore](https://semaphoreui.com/)
 - [qBittorrent](https://www.qbittorrent.org/)
 - [Paperless-ngx](https://docs.paperless-ngx.com/)
+- [Mealie](https://mealie.io/)
 
 ## Grafana
 [![grafana](Docs/Img/grafana.gif)]()
