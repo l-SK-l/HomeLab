@@ -1,1 +1,17 @@
+# Editors / OS
 .vscode/
+.idea/
+.DS_Store
+
+# Secrets — never commit
+.env
+*.env
+*.key
+*.pem
+secrets/
+*credentials*
+
+# Local backups / temp
+*.bak
+*.bak-*
+*.tmp

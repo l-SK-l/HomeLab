@@ -12,3 +12,19 @@
       when: ansible_pkg_mgr == 'apt'
       ansible.builtin.apt:
         upgrade: dist
+
+    - name: Remove packages that are no longer needed
+      when: ansible_pkg_mgr == 'apt'
+      ansible.builtin.apt:
+        autoremove: true
+        autoclean: true
+
+    - name: Check if a reboot is required
+      ansible.builtin.stat:
+        path: /var/run/reboot-required
+      register: reboot_required
+
+    - name: Report hosts that need a reboot
+      ansible.builtin.debug:
+        msg: "Reboot required on {{ inventory_hostname }}"
+      when: reboot_required.stat.exists

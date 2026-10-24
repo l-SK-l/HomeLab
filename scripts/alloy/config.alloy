@@ -1,0 +1,126 @@
+// Grafana Alloy config for the Proxmox host (/etc/alloy/config.alloy)
+// Placeholders: <...> — take the values from Grafana Cloud -> Connections -> Alloy.
+// The API key is NOT stored here: it comes from the GCLOUD_RW_API_KEY env var (/etc/default/alloy).
+
+remotecfg {
+	url            = "https://<fleet-management-endpoint>.grafana.net"
+	id             = "pve"
+	poll_frequency = "60s"
+	attributes     = encoding.from_json(coalesce(`{}`, `{}`))
+
+	basic_auth {
+		username = "<fleet-management-user-id>"
+		password = sys.env("GCLOUD_RW_API_KEY")
+	}
+}
+
+prometheus.remote_write "metrics_service" {
+	endpoint {
+		url = "https://<prometheus-endpoint>.grafana.net/api/prom/push"
+
+		basic_auth {
+			username = "<prometheus-user-id>"
+			password = sys.env("GCLOUD_RW_API_KEY")
+		}
+	}
+}
+
+loki.write "grafana_cloud_loki" {
+	endpoint {
+		url = "https://<loki-endpoint>.grafana.net/loki/api/v1/push"
+
+		basic_auth {
+			username = "<loki-user-id>"
+			password = sys.env("GCLOUD_RW_API_KEY")
+		}
+	}
+}
+
+// ===== Proxmox host: node metrics (replaces node_exporter) =====
+prometheus.exporter.unix "host" {
+	disable_collectors = ["btrfs", "infiniband", "ipvs", "xfs", "zfs", "nfs", "nfsd"]
+
+	filesystem {
+		fs_types_exclude     = "^(autofs|binfmt_misc|bpf|cgroup2?|configfs|debugfs|devpts|devtmpfs|efivarfs|fusectl|fuse\\.lxcfs|hugetlbfs|iso9660|mqueue|nsfs|overlay|proc|procfs|pstore|rpc_pipefs|securityfs|selinuxfs|squashfs|sysfs|tmpfs|tracefs)$"
+		mount_points_exclude = "^/(dev|proc|run|sys|etc/pve|var/lib/lxcfs)($|/)"
+	}
+
+	netclass {
+		ignored_devices = "^(lo|veth.*|fwbr.*|fwpr.*|fwln.*|tap.*)$"
+	}
+
+	netdev {
+		device_exclude = "^(lo|veth.*|fwbr.*|fwpr.*|fwln.*|tap.*)$"
+	}
+}
+
+discovery.relabel "host" {
+	targets = prometheus.exporter.unix.host.targets
+
+	rule {
+		target_label = "instance"
+		replacement  = "pve"
+	}
+
+	rule {
+		target_label = "job"
+		replacement  = "integrations/node_exporter"
+	}
+}
+
+prometheus.scrape "host" {
+	targets         = discovery.relabel.host.output
+	scrape_interval = "60s"
+	forward_to      = [prometheus.remote_write.metrics_service.receiver]
+}
+
+// ===== Proxmox VE API: VMs, LXCs, storage (prometheus-pve-exporter on 127.0.0.1:9221) =====
+prometheus.scrape "pve" {
+	targets = [{
+		__address__ = "127.0.0.1:9221",
+		instance    = "pve",
+	}]
+	job_name        = "pve"
+	metrics_path    = "/pve"
+	params          = { "target" = ["localhost"], "module" = ["default"], "cluster" = ["1"], "node" = ["1"] }
+	scrape_interval = "60s"
+	scrape_timeout  = "30s"
+	forward_to      = [prometheus.remote_write.metrics_service.receiver]
+}
+
+// ===== Host logs: journald -> Grafana Cloud Loki =====
+loki.relabel "journal" {
+	forward_to = []
+
+	rule {
+		source_labels = ["__journal__systemd_unit"]
+		target_label  = "unit"
+	}
+
+	rule {
+		source_labels = ["__journal_priority_keyword"]
+		target_label  = "level"
+	}
+
+	rule {
+		source_labels = ["__journal_syslog_identifier"]
+		target_label  = "syslog_identifier"
+	}
+}
+
+loki.source.journal "host" {
+	max_age       = "12h"
+	relabel_rules = loki.relabel.journal.rules
+	labels        = { job = "integrations/node_exporter", instance = "pve" }
+	forward_to    = [loki.process.journal.receiver]
+}
+
+loki.process "journal" {
+	// iptag logs "Checking fw net interface..." every minute — noise
+	stage.drop {
+		source     = ""
+		expression = "Checking fw net interface"
+	}
+
+	forward_to = [loki.write.grafana_cloud_loki.receiver]
+}
